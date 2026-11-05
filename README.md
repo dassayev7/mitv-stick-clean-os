@@ -88,7 +88,31 @@ Medições reais colhidas diretamente via kernel (`/proc/meminfo`) no dispositiv
 
 ---
 
-## 🚀 Como Utilizar
+## 🤖 Instalação Automática via Agente de IA (Antigravity, Claude, Cursor)
+
+Você pode instalar e configurar todo o projeto automaticamente utilizando qualquer agente de IA com acesso a terminal (como **Google Antigravity**, **Claude Code**, **Cursor**, etc.).
+
+Basta copiar o prompt abaixo, substituir pelo IP da sua TV e colar no seu agente:
+
+```markdown
+Você é um especialista em sistemas Android embarcados e automação via ADB.
+Sua missão é realizar a otimização extrema, debloat seguro e instalação do sistema customizado no meu Xiaomi Mi TV Stick (Android TV 9 - 1 GB RAM), utilizando como base o repositório público: https://github.com/dassayev7/mitv-stick-clean-os.git
+
+IP do meu dispositivo na rede local: <IP_DA_SUA_TV>:5555
+
+Por favor, siga rigorosamente o fluxo de trabalho:
+1. Conecte ao dispositivo via ADB ('adb connect <IP_DA_SUA_TV>:5555') e rode o inventário com 'bash scripts/01_inventory.sh <IP_DA_SUA_TV>:5555'.
+2. Execute o debloat seguro com 'bash scripts/02_debloat_safe.sh <IP_DA_SUA_TV>:5555' (preservando Widevine L1, Play Store e Disney+ com partnersetup).
+3. Ajuste animações para 0x com 'bash scripts/03_optimize_speed.sh <IP_DA_SUA_TV>:5555'.
+4. Instale e inicie o launcher com 'bash scripts/04_install_launcher.sh <IP_DA_SUA_TV>:5555'.
+5. Valide o foco da Home e apresente o ganho de memória RAM livre final obtido.
+```
+
+> 📖 **Guia Completo para Agentes:** Veja mais detalhes e instruções avançadas no documento [docs/HOW_TO_AI_AGENT.md](docs/HOW_TO_AI_AGENT.md).
+
+---
+
+## 🚀 Como Utilizar Manualmente (Linha de Comando)
 
 ### Pré-requisitos
 - Xiaomi Mi TV Stick conectado à mesma rede Wi-Fi do computador.
