@@ -43,3 +43,4 @@ echo "=== MEMÓRIA RAM ATUAL ==="
 echo ""
 echo "=== LAUNCHER PADRÃO ATUAL ==="
 "$ADB" -s "$TV_IP" shell cmd package resolve-activity --brief -a android.intent.action.MAIN -c android.intent.category.HOME
+

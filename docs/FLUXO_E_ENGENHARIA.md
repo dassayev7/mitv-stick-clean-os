@@ -86,3 +86,4 @@ Para descanso de tela:
 | **zRAM Comprimida em Uso** | 299 MB | **41 MB** | **-86,3% de pressão de CPU** |
 | **Escalas de Animação** | 1.0x (lentas) | **0.0x (instantâneas)** | **100% imediato** |
 | **Consumo do Launcher** | ~140 MB | **~28 MB** | **-80% de pegada de memória** |
+

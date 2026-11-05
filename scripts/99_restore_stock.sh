@@ -61,3 +61,4 @@ echo "=== Reiniciando para a Home Oficial ==="
 "$ADB" -s "$TV_IP" shell am start -W -a android.intent.action.MAIN -c android.intent.category.HOME
 
 echo "Restauração concluída!"
+

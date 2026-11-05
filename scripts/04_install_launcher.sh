@@ -38,3 +38,4 @@ echo "Iniciando como tela inicial principal..."
 "$ADB" -s "$TV_IP" shell am start -W -n com.gathin.tvhome/.MainActivity -a android.intent.action.MAIN -c android.intent.category.HOME
 
 echo "Launcher instalado e ativo com sucesso!"
+

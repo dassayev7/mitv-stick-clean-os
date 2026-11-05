@@ -29,3 +29,4 @@ echo "Window: $($ADB -s "$TV_IP" shell settings get global window_animation_scal
 echo "Transition: $($ADB -s "$TV_IP" shell settings get global transition_animation_scale)"
 echo "Animator: $($ADB -s "$TV_IP" shell settings get global animator_duration_scale)"
 echo "Concluído!"
+

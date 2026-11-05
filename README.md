@@ -139,3 +139,4 @@ O APK gerado estará em:
 - Base do launcher: [CleanYourTV](https://github.com/Gathin23/cleanyourtv) sob licença GPL-3.0.
 - Tipografia: Apple San Francisco (SF Pro).
 - Modificações, engenharia reversa e otimização por **Dassayev Rodrigues**.
+

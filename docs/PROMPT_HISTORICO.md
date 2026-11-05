@@ -61,3 +61,4 @@ Este arquivo registra a evolução cronológica dos comandos e requisitos enviad
   > *"O volume do efeito ainda está muito alto mesmo com o volume em 0, diminua em 60%"*
   > *"Utilize esse som para abertura dos apps, siga as regras de volume do efeito de foco."*
 - **Ação:** Implementação de `SoundPool` de baixa latência em `USAGE_MEDIA`, desativação de cliques mecânicos padrão do Android, calibração sutil de volume e silêncio automático quando a TV está no mudo.
+

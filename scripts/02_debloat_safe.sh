@@ -82,3 +82,4 @@ echo "Isso garante que a TV nunca volte ao launcher pesado da Xiaomi no boot."
 echo ""
 echo "=== Debloat concluído com sucesso! ==="
 "$ADB" -s "$TV_IP" shell cat /proc/meminfo | grep -E "MemFree|MemAvailable|SwapFree"
+
