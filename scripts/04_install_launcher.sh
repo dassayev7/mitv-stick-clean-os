@@ -33,9 +33,25 @@ echo "Conectando ao dispositivo $TV_IP..."
 echo "Instalando o launcher CleanYourTV..."
 "$ADB" -s "$TV_IP" install -r "$APK_PATH"
 
+echo "Configurando permissões e auto-inicialização..."
+"$ADB" -s "$TV_IP" shell cmd appops set com.gathin.tvhome AUTO_START allow 2>/dev/null || true
+"$ADB" -s "$TV_IP" shell cmd appops set com.gathin.tvhome APP_AUTO_START allow 2>/dev/null || true
+"$ADB" -s "$TV_IP" shell appops write-settings 2>/dev/null || true
+"$ADB" -s "$TV_IP" shell pm grant com.gathin.tvhome android.permission.ACCESS_FINE_LOCATION 2>/dev/null || true
+
+echo "Configurando HomeKeyService (Mapeamento do Botão Home no Controle Xiaomi)..."
+"$ADB" -s "$TV_IP" shell settings put secure enabled_accessibility_services com.gathin.tvhome/.HomeKeyService
+"$ADB" -s "$TV_IP" shell settings put secure accessibility_enabled 1
+
+echo "Definindo como Home padrão do sistema..."
+"$ADB" -s "$TV_IP" shell cmd package set-home-activity --user 0 com.gathin.tvhome/.MainActivity
+
+echo "Otimizando compilação AOT (modo speed para latência zero)..."
+"$ADB" -s "$TV_IP" shell cmd package compile -m speed -f com.gathin.tvhome
+
 echo "Iniciando como tela inicial principal..."
 "$ADB" -s "$TV_IP" shell am force-stop com.gathin.tvhome || true
 "$ADB" -s "$TV_IP" shell am start -W -n com.gathin.tvhome/.MainActivity -a android.intent.action.MAIN -c android.intent.category.HOME
 
-echo "Launcher instalado e ativo com sucesso!"
+echo "Launcher instalado, compilado e ativo com sucesso!"
 

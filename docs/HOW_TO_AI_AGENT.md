@@ -62,3 +62,4 @@ Por favor, siga rigorosamente o fluxo de trabalho abaixo:
 - **Zero Risco de Brick:** Não altera arquivos da partição `/system`. Todas as remoções são feitas no escopo do usuário 0 (`pm uninstall --user 0`), permitindo reversão total com o script `99_restore_stock.sh`.
 - **Compatibilidade com Disney+, Netflix e Prime Video:** Preserva os serviços de autenticação necessários para os streamings funcionarem em 1080p sem telas pretas.
 - **Tipografia Apple San Francisco e Sons Táteis:** O launcher embutido no repositório já vem compilado com a fonte SF Pro e feedback de áudio nativo de baixa latência (`SoundPool`).
+

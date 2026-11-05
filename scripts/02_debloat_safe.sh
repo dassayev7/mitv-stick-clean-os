@@ -34,14 +34,23 @@ UNINSTALL_LIST=(
     "com.inlogic.golazo.atv"                   # Golazo
     "com.inlogic.footballleague.atv"           # Football League
     "com.mitv.tvhome.atv"                      # PatchWall Launcher (Xiaomi)
+    "com.mitv.tvhome.michannel"                # Mi TV Canais
+    "com.miui.tv.analytics"                    # MIUI Analytics TV
     "com.xiaomi.mitv.mediaexplorer"            # Mi Media Explorer
     "com.mitv.videoplayer"                     # Mi Video Player
     "com.xiaomi.mitv.tvchannel"                # Mi TV Channel
     "com.xiaomi.mitv.smartshare"               # Mi Smart Share
     "com.alphonso.alphonso_service"            # Alphonso Telemetria OEM
+    "tv.alphonso.alphonso_eula"                # Alphonso EULA Tracker
+    "com.xm.webcontent"                        # Xiaomi Web Content
+    "android.autoinstalls.config.xiaomi.mibox3"# Bloat auto-install Play
+    "android.autoinstalls.config.xioami.mibox3"# Bloat auto-install Play (typo OEM)
     "com.xiaomi.devicereport"                  # Xiaomi Device Report / Telemetria
     "com.xiaomi.statistic"                     # Xiaomi Analytics
     "com.google.android.feedback"              # Google Feedback
+    "com.google.android.tv.bugreportsender"    # Bug Report Sender
+    "com.google.android.tvrecommendations"     # Recomendações e Anúncios Google TV
+    "com.google.android.tv"                    # Live Channels (sem tuner no Mi Stick)
     "com.google.android.backuptransport"       # Backup em nuvem Google (consome RAM)
     "com.google.android.play.games"            # Google Play Games
     "com.google.android.videos"                # Google Play Filmes / TV
