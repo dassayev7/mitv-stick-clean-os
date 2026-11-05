@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="54dp"
+    android:height="54dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Halo exterior -->
+    <path
+        android:fillColor="#4DFFB703"
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+    <!-- Círculo do sol HTC -->
+    <path
+        android:fillColor="#FFF59E0B"
+        android:pathData="M24,24m-16,0a16,16 0,1 1,32 0a16,16 0,1 1,-32 0" />
+    <!-- Brilho superior suave -->
+    <path
+        android:fillColor="#FFFFD166"
+        android:pathData="M24,24m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0" />
+</vector>

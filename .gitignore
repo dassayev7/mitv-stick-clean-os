@@ -1,0 +1,23 @@
+# Gradle & Android Build Caches
+.gradle/
+build/
+app/build/
+*.iml
+.idea/
+local.properties
+.cxx/
+captures/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Private & Personal Files
+photos/
+*.orig
+screen_check.png
+screen_aligned.png
+screen_sf.png
+screen_sf_final.png

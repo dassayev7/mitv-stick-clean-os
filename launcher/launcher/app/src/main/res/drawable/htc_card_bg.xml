@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra externa sutil -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="18dp" />
+            <solid android:color="#40000000" />
+        </shape>
+    </item>
+    <!-- Cartão com gradiente flip HTC -->
+    <item android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <gradient
+                android:angle="270"
+                android:startColor="#FFFFFFFF"
+                android:centerColor="#FFF2F2F2"
+                android:endColor="#FFE2E2E2"
+                android:type="linear" />
+            <stroke
+                android:width="1.5dp"
+                android:color="#FFCCCCCC" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screensaver HTC Sense Flip Clock + Painel Meteorológico e Alertas -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF070A10">
+
+    <ImageView
+        android:id="@+id/dreamAmbient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.25"
+        android:importantForAccessibility="no" />
+
+    <!-- Container Geral em 2 Colunas (Relógio à Esquerda, Painel à Direita) -->
+    <LinearLayout
+        android:id="@+id/dreamContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp">
+
+        <!-- ================= COLUNA ESQUERDA: RELÓGIO HTC SENSE ================= -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="40dp">
+
+            <!-- Linha dos dois cartões Flip (Horas e Minutos) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Cartão das Horas -->
+                <FrameLayout
+                    android:layout_width="175dp"
+                    android:layout_height="190dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/htc_card_bg">
+
+                    <TextClock
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:format12Hour="hh"
+                        android:format24Hour="HH"
+                        android:textColor="#FF222222"
+                        android:textSize="110sp"
+                        android:fontFamily="@string/font_light"
+                        android:includeFontPadding="false" />
+
+                    <!-- Linha do Flip -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2.5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="#2E000000" />
+                </FrameLayout>
+
+                <!-- Cartão dos Minutos -->
+                <FrameLayout
+                    android:layout_width="175dp"
+                    android:layout_height="190dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/htc_card_bg">
+
+                    <TextClock
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:format12Hour="mm"
+                        android:format24Hour="mm"
+                        android:textColor="#FF222222"
+                        android:textSize="110sp"
+                        android:fontFamily="@string/font_light"
+                        android:includeFontPadding="false" />
+
+                    <!-- Linha do Flip -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2.5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="#2E000000" />
+
+                    <!-- AM/PM indicador -->
+                    <TextClock
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:format12Hour="a"
+                        android:format24Hour=""
+                        android:textColor="#FF666666"
+                        android:textSize="15sp"
+                        android:fontFamily="@string/font_medium"
+                        android:textAllCaps="true" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Barra Inferior HTC Sense -->
+            <FrameLayout
+                android:layout_width="366dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="-14dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/htc_bar_bg"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextClock
+                        android:id="@+id/htcDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:format12Hour="EEE, d 'de' MMM"
+                        android:format24Hour="EEE, d 'de' MMM"
+                        android:textColor="#FFEAEAEA"
+                        android:textSize="16sp"
+                        android:fontFamily="@string/font_medium"
+                        android:includeFontPadding="false" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="vertical"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Clima Atual"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="14sp"
+                            android:fontFamily="@string/font_medium"
+                            android:includeFontPadding="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="24°C • Estável"
+                            android:textColor="#FFAAAAAA"
+                            android:textSize="12sp"
+                            android:fontFamily="@string/font_regular"
+                            android:includeFontPadding="false" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- Sol Dourado HTC -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal|top"
+                    android:src="@drawable/htc_sun"
+                    android:importantForAccessibility="no" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <!-- ================= COLUNA DIREITA: PREVISÃO POR HORÁRIO E ALERTAS ================= -->
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/htc_bar_bg"
+            android:padding="18dp">
+
+            <!-- Cabeçalho do Painel -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PREVISÃO DO TEMPO"
+                    android:textColor="#FFDDDDDD"
+                    android:textSize="13sp"
+                    android:fontFamily="@string/font_medium"
+                    android:letterSpacing="0.08" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Hoje"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="13sp"
+                    android:fontFamily="@string/font_regular" />
+            </RelativeLayout>
+
+            <!-- Linha 1: 06:00 Manhã -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:text="06:00"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_regular" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="☀️ Ensolarado"
+                    android:textColor="#EEFFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20°C"
+                    android:textColor="#FFAAAAAA"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_medium" />
+            </LinearLayout>
+
+            <!-- Linha 2: 12:00 Meio-dia -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:text="12:00"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_regular" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="⛅ Parcialmente Nublado"
+                    android:textColor="#EEFFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28°C"
+                    android:textColor="#FFFFD166"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_medium" />
+            </LinearLayout>
+
+            <!-- Linha 3: 18:00 Tarde -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:text="18:00"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_regular" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🌤️ Céu Limpo"
+                    android:textColor="#EEFFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24°C"
+                    android:textColor="#FFAAAAAA"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_medium" />
+            </LinearLayout>
+
+            <!-- Linha 4: 00:00 Noite -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_regular" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🌙 Noite Estrelada"
+                    android:textColor="#EEFFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18°C"
+                    android:textColor="#FFAAAAAA"
+                    android:textSize="14sp"
+                    android:fontFamily="@string/font_medium" />
+            </LinearLayout>
+
+            <!-- Divisor Sutil -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#26FFFFFF" />
+
+            <!-- Seção de Alertas e Monitoramento Global -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Indicador Verde de Status Normal -->
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="#FF06D6A0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MONITORAMENTO GLOBAL GDACS/USGS"
+                        android:textColor="#CC06D6A0"
+                        android:textSize="11sp"
+                        android:fontFamily="@string/font_medium"
+                        android:letterSpacing="0.05" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Sem alertas de tempestades severas ou abalos sísmicos críticos nas últimas 24h."
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="12sp"
+                    android:fontFamily="@string/font_regular"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
